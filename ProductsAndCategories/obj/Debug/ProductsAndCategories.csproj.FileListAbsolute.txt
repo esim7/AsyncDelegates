@@ -25,5 +25,3 @@ C:\Users\home\source\repos\ProductsAndCategories\ProductsAndCategories\bin\Debug
 C:\Users\home\source\repos\ProductsAndCategories\ProductsAndCategories\obj\Debug\ProductsAndCategories.csproj.CopyComplete
 C:\Users\home\source\repos\ProductsAndCategories\ProductsAndCategories\bin\Debug\App.config
 C:\Users\home\source\repos\ProductsAndCategories\ProductsAndCategories\bin\Debug\DataContext.dll.config
-C:\Users\home\source\repos\ProductsAndCategories\ProductsAndCategories\obj\Debug\CreateCategory.g.cs
-C:\Users\home\source\repos\ProductsAndCategories\ProductsAndCategories\obj\Debug\CreateCategory.baml
