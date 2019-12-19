@@ -1,0 +1,14 @@
+C:\Users\home\source\repos\ProductsAndCategories\DataContext\bin\Debug\DataContext.dll
+C:\Users\home\source\repos\ProductsAndCategories\DataContext\bin\Debug\DataContext.pdb
+C:\Users\home\source\repos\ProductsAndCategories\DataContext\bin\Debug\Domain.dll
+C:\Users\home\source\repos\ProductsAndCategories\DataContext\bin\Debug\EntityFramework.dll
+C:\Users\home\source\repos\ProductsAndCategories\DataContext\bin\Debug\EntityFramework.SqlServer.dll
+C:\Users\home\source\repos\ProductsAndCategories\DataContext\bin\Debug\Domain.pdb
+C:\Users\home\source\repos\ProductsAndCategories\DataContext\bin\Debug\EntityFramework.xml
+C:\Users\home\source\repos\ProductsAndCategories\DataContext\bin\Debug\EntityFramework.SqlServer.xml
+C:\Users\home\source\repos\ProductsAndCategories\DataContext\obj\Debug\DataContext.csprojAssemblyReference.cache
+C:\Users\home\source\repos\ProductsAndCategories\DataContext\obj\Debug\DataContext.csproj.CopyComplete
+C:\Users\home\source\repos\ProductsAndCategories\DataContext\obj\Debug\DataContext.dll
+C:\Users\home\source\repos\ProductsAndCategories\DataContext\obj\Debug\DataContext.pdb
+C:\Users\home\source\repos\ProductsAndCategories\DataContext\bin\Debug\App.config
+C:\Users\home\source\repos\ProductsAndCategories\DataContext\bin\Debug\DataContext.dll.config

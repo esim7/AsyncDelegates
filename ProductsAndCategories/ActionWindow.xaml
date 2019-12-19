@@ -1,0 +1,79 @@
+﻿<Page x:Class="ProductsAndCategories.ActionWindow"
+      xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+      xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+      xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+      xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+      xmlns:local="clr-namespace:ProductsAndCategories"
+      mc:Ignorable="d" 
+      d:DesignHeight="450" d:DesignWidth="800"
+      Title="ActionWindow" Background="Brown">
+
+    <Grid>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="399*"/>
+            <ColumnDefinition Width="401*"/>
+        </Grid.ColumnDefinitions>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="26*"/>
+            <RowDefinition Height="89*"/>
+            <RowDefinition Height="193*"/>
+            <RowDefinition Height="116*"/>
+            <RowDefinition Height="26*"/>
+        </Grid.RowDefinitions>
+        <Button Content="Категории" HorizontalAlignment="Left" VerticalAlignment="Top" Width="800" Height="25" HorizontalContentAlignment="Center" Background="Aqua" Click="categoriesButton_Click" Grid.ColumnSpan="2"/>
+        <Button Content="Товары" HorizontalAlignment="Left" Margin="0,0,0,-0.4" VerticalAlignment="Top" Width="800" Grid.Row="4" Height="26" HorizontalContentAlignment="Center" Background="Aqua" Click="itemsButton_Click" Grid.ColumnSpan="2"/>
+        <Button Content="Создать категорию" Name="createCategory_button" Visibility="Hidden" HorizontalAlignment="Left" Margin="331,9.6,0,0" Grid.Row="1" VerticalAlignment="Top" Width="140" Click="createCategoryButton_Click" Grid.ColumnSpan="2" Height="19"/>
+        <Button Content="Изменить категорию" Name="editCategory_button" Visibility="Hidden" HorizontalAlignment="Left" Margin="331,33.6,0,0" Grid.Row="1" VerticalAlignment="Top" Width="140" Click="editCategoryButton_Click" Grid.ColumnSpan="2" Height="19"/>
+        <Button Content="Создать товар" Name="createItem_button" Visibility="Hidden" HorizontalAlignment="Left" Margin="331,74,0,0" Grid.Row="3" VerticalAlignment="Top" Width="140" Click="createProductButton_Click" Grid.ColumnSpan="2" Height="19"/>
+        <ListView Margin="10,10.8,10.2,10" Name="lvCategories" Grid.Row="2" Grid.Column="0">
+            <ListView.View>
+                <GridView>
+                    <GridViewColumn Header="Наименование категории" Width="350" DisplayMemberBinding="{Binding Name}"/>
+                </GridView>
+            </ListView.View>
+        </ListView>
+
+
+        <Grid Name="grid_Categories" Visibility="Hidden" Grid.ColumnSpan="2" Margin="0,26,0,0.2" Grid.RowSpan="2">
+            <TextBox Name="newCotegoryName_textbox" Visibility="Visible" HorizontalAlignment="Left" HorizontalContentAlignment="Center" Height="23" Margin="10,26,0,0" TextWrapping="Wrap"  VerticalAlignment="Top" Width="134"/>
+            <Label Name="newCategoryName_label" Content="Название категории" Visibility="Visible" HorizontalAlignment="Left" Margin="10,0,0,0" VerticalAlignment="Top" Width="134"/>
+            <Button Name="Save_Button" Visibility="Visible" Content="Сохранить" HorizontalAlignment="Left" Margin="117,54,0,0" VerticalAlignment="Top" Width="75" Height="23" Click="saveCategoryButton_Click"/>
+            <Label Name="newCategoryInfo_label" Content="Описание" Visibility="Visible" HorizontalContentAlignment="Center" HorizontalAlignment="Left" Margin="165,0,0,0" VerticalAlignment="Top" Width="134"/>
+            <TextBox Name="newCategoryInfo_textbox" Visibility="Visible" HorizontalAlignment="Left" HorizontalContentAlignment="Center" Height="23" Margin="165,26,0,0" TextWrapping="Wrap"  VerticalAlignment="Top" Width="134"/>
+        </Grid>
+
+        <Grid Name="grid_CategoriesEdit" Visibility="Hidden" Grid.ColumnSpan="2" Margin="0,26,0,0.2" Grid.RowSpan="2">
+            <TextBox Name="editCategoryName_textbox" Visibility="Visible" HorizontalAlignment="Left" HorizontalContentAlignment="Center" Height="23" Margin="501,26,0,0" TextWrapping="Wrap"  VerticalAlignment="Top" Width="134"/>
+            <Label Name="editCategoryName_label" Content="Название категории" Visibility="Visible" HorizontalAlignment="Left" Margin="501,0,0,0" VerticalAlignment="Top" Width="134"/>
+            <Button Name="SaveEditCategory_Button" Visibility="Visible" Content="Сохранить" HorizontalAlignment="Left" Margin="605,54,0,0" VerticalAlignment="Top" Width="75" Height="23" Click="saveEditedCategoryButton_Click"/>
+            <Label Name="editCategoryInfo_label" Content="Описание" Visibility="Visible" HorizontalContentAlignment="Center" HorizontalAlignment="Left" Margin="649,0,0,0" VerticalAlignment="Top" Width="134"/>
+            <TextBox Name="editCategoryInfo_textbox" Visibility="Visible" HorizontalAlignment="Left" HorizontalContentAlignment="Center" Height="23" Margin="649,26,0,0" TextWrapping="Wrap"  VerticalAlignment="Top" Width="134"/>
+        </Grid>
+
+        <Grid Grid.Row="3" Name="grid_Products" Visibility="Hidden" Grid.ColumnSpan="2">
+            <TextBox Name="newProductName_textbox" Visibility="Visible" HorizontalAlignment="Left" HorizontalContentAlignment="Center" Height="23" Margin="10,43,0,0" TextWrapping="Wrap"  VerticalAlignment="Top" Width="134"/>
+            <Label Name="newProductName_label" Content="Название категории" Visibility="Visible" HorizontalAlignment="Left" Margin="10,13,0,0" Grid.Row="3" VerticalAlignment="Top" Width="134"/>
+            <Button Name="SaveProduct_Button" Visibility="Visible" HorizontalAlignment="Left" Content="Сохранить" Margin="117,71,0,0" VerticalAlignment="Top" Width="75" Height="23" Click="saveProductButton_Click"/>
+            <Label Name="newProductInfo_label" Content="Описание" Visibility="Visible" HorizontalContentAlignment="Center" HorizontalAlignment="Left" Margin="165,13,0,0" Grid.Row="3" VerticalAlignment="Top" Width="134"/>
+            <TextBox Name="newProductInfo_textbox" Visibility="Visible" HorizontalAlignment="Left" HorizontalContentAlignment="Center" Height="23" Margin="165,43,0,0" TextWrapping="Wrap"  VerticalAlignment="Top" Width="134" RenderTransformOrigin="0.5,0.5"/>
+        </Grid>
+
+        <Grid Grid.Row="3" Name="grid_ProductsEdit" Visibility="Hidden" Grid.ColumnSpan="2">
+            <TextBox Name="EditProductName_textbox" Visibility="Visible" HorizontalAlignment="Left" HorizontalContentAlignment="Center" Height="23" Margin="502,41,0,0" TextWrapping="Wrap"  VerticalAlignment="Top" Width="134"/>
+            <Label Name="EditProductName_label" Content="Название товара" Visibility="Visible" HorizontalAlignment="Left" Margin="502,10,0,0" VerticalAlignment="Top" Width="134"/>
+            <Button Name="SaveEditProduct_Button" Visibility="Visible" HorizontalAlignment="Left" Content="Сохранить" Margin="607,71,0,0" VerticalAlignment="Top" Width="75" Height="23" Click="saveEditedProductButton_Click"/>
+            <Label Name="EditProductInfo_label" Content="Описание" Visibility="Visible" HorizontalContentAlignment="Center" HorizontalAlignment="Left" Margin="648,10,0,0" VerticalAlignment="Top" Width="134"/>
+            <TextBox Name="EditProductInfo_textbox" Visibility="Visible" HorizontalAlignment="Left" HorizontalContentAlignment="Center" Height="23" Margin="648,41,0,0" TextWrapping="Wrap"  VerticalAlignment="Top" Width="134" RenderTransformOrigin="0.5,0.5"/>
+        </Grid>
+
+        <ListView Margin="11.8,10.8,10,10" Name="lvProducts" Grid.Row="2" Grid.Column="1">
+            <ListView.View>
+                <GridView>
+                    <GridViewColumn Header="Наименование продукта" Width="350" DisplayMemberBinding="{Binding Name}"/>
+                </GridView>
+            </ListView.View>
+        </ListView>
+        
+        <Button Name="editProduct_Button" Visibility="Hidden" Content="Изменить товар" HorizontalAlignment="Left" Margin="331,50,0,0" Grid.Row="3" VerticalAlignment="Top" Width="140" Click="editProduct_Click" Grid.ColumnSpan="2" Height="19"/>
+    </Grid>
+</Page>

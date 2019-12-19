@@ -1,0 +1,5 @@
+C:\Users\home\source\repos\ProductsAndCategories\Domain\bin\Debug\Domain.dll
+C:\Users\home\source\repos\ProductsAndCategories\Domain\bin\Debug\Domain.pdb
+C:\Users\home\source\repos\ProductsAndCategories\Domain\obj\Debug\Domain.csprojAssemblyReference.cache
+C:\Users\home\source\repos\ProductsAndCategories\Domain\obj\Debug\Domain.dll
+C:\Users\home\source\repos\ProductsAndCategories\Domain\obj\Debug\Domain.pdb
